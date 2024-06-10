@@ -1,0 +1,72 @@
+@media screen and (max-width: 68.75rem) {
+  .links-topo {
+    display: none;
+  }
+
+  .container_serviços {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .container_sobre {
+    align-items: center;
+    flex-direction: column-reverse;
+    gap: 5rem;
+    margin-top: 2rem;
+  }
+
+  .container_menu {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .container_contato {
+    flex-direction: column;
+    margin: 0;
+    gap: 5rem;
+  }
+}
+
+@media screen and (max-width: 45rem) {
+  .container_inicio h2 {
+    font-size: 2rem;
+  }
+
+  .container_serviços {
+    gap: 4rem;
+  }
+
+  .container_menu {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+@media screen and (max-width: 25rem) {
+  .container_inicio h2 {
+    font-size: 1.5rem;
+  }
+
+  .container_inicio p {
+    font-size: 0.8rem;
+  }
+
+  .secao_serviços h2 {
+    font-size: 2rem;
+  }
+
+  .secao_sobre h2 {
+    font-size: 2rem;
+  }
+
+  .sobreNos p {
+    width: 19rem;
+    font-size: 0.8rem;
+  }
+
+  .container_sobre img {
+    width: 200px;
+  }
+
+  .secao_menu h2 {
+    font-size: 2rem;
+  }
+}
