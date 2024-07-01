@@ -91,8 +91,6 @@ function addProductToCart(title, price, productImg) {
   cartShopBox
     .getElementsByClassName("carrinho_quantidade")[0]
     .addEventListener("change", quantityChanged);
-
-  alert("Seu pedido foi Adicionado");
 }
 
 // Função para atualizar o total
@@ -126,6 +124,47 @@ function quantityChanged(event) {
   }
   updateTotal();
 }
+
+//Função abaixo será executada ao clicar no botão adicionar carrinho
+
+let notifications = document.querySelector(".notifications");
+
+function createToast(type, title, text) {
+  let newToast = document.createElement("div");
+  newToast.innerHTML = `
+            <div class="toast ${type}">
+              
+                <div class="content">
+                    <div class="title">${title}</div>
+                    <span>${text}</span>
+                </div>
+                <svg
+              style='width: 30px; cursor: pointer'  onclick="(this.parentElement).remove()"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 384 512"
+            >
+              <!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+              <path
+                d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"
+              />
+            </svg>
+            </div>`;
+  notifications.appendChild(newToast);
+  newToast.timeOut = setTimeout(() => newToast.remove(), 5000);
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+  const buttons = document.querySelectorAll(".adicionar_carrinho");
+
+  buttons.forEach((button) => {
+    button.addEventListener("click", function () {
+      let type = "success";
+      let title = "Produto Adicionado";
+      let text = "Produto adicionado ao carrinho!";
+      createToast(type, title, text);
+    });
+  });
+});
 
 //finalizar compra
 function Finalizada() {
