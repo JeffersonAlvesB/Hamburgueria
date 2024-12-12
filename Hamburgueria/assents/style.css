@@ -1,0 +1,507 @@
+@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
+
+html {
+    scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+    width: 12px; /* Largura do scrollbar */
+}
+
+::-webkit-scrollbar-track {
+    background-color: black; /* Cor de fundo */
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #ff0; /* Cor da barra de rolagem */
+    border-radius: 6px; /* Borda arredondada */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    font-family: "Lobster", sans-serif;
+}
+
+header {
+    background-image: url(images/background.jpeg);
+    background-size: cover;
+    border-bottom: 1px solid white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.3rem 7% 0.4rem 7%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    gap: 5rem;
+    position: relative;
+}
+
+.logo {
+    font-size: 2rem;
+    color: white;
+}
+
+.links-topo {
+    display: flex;
+    gap: 2rem;
+}
+
+.links-topo li {
+    list-style: none;
+}
+
+.links-topo a {
+    color: white;
+    font-size: 1.2rem;
+    text-decoration: none;
+}
+
+.links-topo a:hover {
+    color: rgba(255, 255, 0, 0.692);
+    border-bottom: 1px solid rgba(255, 255, 0, 0.692);
+}
+
+.carrinho_icon {
+    width: 3rem;
+    padding: 0.5rem;
+    cursor: pointer;
+    border: 1px solid rgba(255, 255, 0, 0.692);
+    border-radius: 20%;
+}
+
+.carrinho_icon:hover {
+    background-color: rgba(255, 255, 0, 0.692);
+}
+
+.carrinho_container {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 20rem;
+    height: 100vh;
+    padding: 20px;
+    background-color: silver;
+    box-shadow: -2px 4px hsl(0 4% 15% / 10%);
+    transition: 300ms;
+    overflow-y: auto;
+}
+
+.carrinho_container::-webkit-scrollbar {
+    width: 8px; /* Largura do scrollbar */
+}
+
+/* Cor do fundo do scrollbar */
+.carrinho_container::-webkit-scrollbar-track {
+    background-color: white; /* Cor de fundo */
+}
+
+/* Cor da barra de rolagem */
+.carrinho_container::-webkit-scrollbar-thumb {
+    background-color: gray; /* Cor da barra de rolagem */
+    border-radius: 6px; /* Borda arredondada */
+}
+
+.carrinho_container.ativo {
+    right: 0;
+}
+
+.carrinho_container h2 {
+    color: black;
+    font-size: 2rem;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.carrinho_box {
+    display: grid;
+    grid-template-columns: 32% 50% 18%;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.carrinho_produto_img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    padding: 10px;
+}
+
+.detalhe_box {
+    display: grid;
+    row-gap: 0.5rem;
+}
+
+.carrinho_titulo_produto {
+    font-size: 1.3rem;
+    text-transform: uppercase;
+}
+
+.carrinho_preço,
+.carrinho_quantidade {
+    font-size: 1.1rem;
+}
+
+.buttons_mais_menos {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.menos,
+.mais {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    width: 24px;
+    height: 24px;
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 500ms;
+}
+
+.menos:hover,
+.mais:hover {
+    background-color: rgb(160, 8, 8);
+}
+
+.carrinho_remover {
+    width: 1.5rem;
+    cursor: pointer;
+}
+
+.total {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 1.5rem;
+    border-top: 1px solid black;
+}
+
+#total_preço {
+    color: black;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    margin-left: 0.5rem;
+}
+
+.btn_comprar {
+    display: flex;
+    margin: 1.5rem auto 0 auto;
+    padding: 0.5rem 1rem;
+    border: none;
+    background-color: #ff0000;
+    color: #fff;
+    font-size: 1.5rem;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 500ms;
+}
+
+.fechar_carrinho {
+    position: absolute;
+    top: 1rem;
+    right: 0.8rem;
+    width: 1.5rem;
+    color: var(--text-color);
+    cursor: pointer;
+}
+
+.btn_comprar:hover {
+    background-color: rgb(160, 8, 8);
+}
+
+.secao_inicio {
+    background-image: url(images/Imagem_principal.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    position: relative;
+}
+
+.container_inicio {
+    max-width: 450px;
+    position: absolute;
+    top: 30%;
+    left: 7%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.container_inicio h2 {
+    color: white;
+    font-size: 2.5rem;
+}
+
+.container_inicio p {
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container_inicio a {
+    width: 9rem;
+    color: black;
+    background-color: rgba(255, 255, 0, 0.692);
+    border: 1px solid rgba(255, 255, 0, 0.692);
+    text-decoration: none;
+    text-align: center;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    transition: 500ms;
+}
+
+.container_inicio a:hover {
+    background-color: transparent;
+    color: rgba(255, 255, 0, 0.692);
+}
+
+.secao_serviços {
+    padding: 3.8rem 0;
+    min-height: 30vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+.secao_serviços h2 {
+    font-size: 2.5rem;
+    color: black;
+}
+
+.container_serviços {
+    display: flex;
+    gap: 8rem;
+    margin: 0 2%;
+}
+
+.serviço {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 0.5rem;
+}
+
+.secao_sobre {
+    padding: 3.8rem 0;
+    min-height: 30vh;
+    background-color: #222831;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.secao_sobre h2 {
+    color: white;
+    font-size: 2.5rem;
+}
+
+.container_sobre {
+    display: flex;
+    gap: 20rem;
+}
+
+.container_sobre img {
+    width: 18rem;
+    object-fit: contain;
+}
+
+.sobreNos {
+    color: white;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 0.5rem;
+}
+
+.sobreNos h3 {
+    font-size: 1.5rem;
+    color: rgba(255, 255, 0, 0.692);
+}
+
+.sobreNos p {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.secao_menu {
+    padding: 3.8rem 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+.secao_menu h2 {
+    color: black;
+    font-size: 2.5rem;
+}
+
+.container_menu {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Duas colunas com largura igual */
+    gap: 3rem;
+}
+
+.menu_cards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    border: 3px solid #222831;
+    width: 20rem;
+    height: 29rem;
+    padding: 0.5rem;
+    background: linear-gradient(to bottom, white 5%, #222831 45%);
+}
+
+.menu_cards img {
+    width: 10rem;
+    height: 10rem;
+    object-fit: contain;
+    margin: 2% 0;
+}
+
+.menu_cards h3 {
+    color: white;
+    font-size: 1.5rem;
+}
+
+.menu_cards p {
+    color: white;
+    text-align: start;
+}
+
+.menu_cards span {
+    color: white;
+    margin-top: auto;
+}
+
+.menu_cards button {
+    font-size: 1.2rem;
+    background-color: rgba(255, 255, 0, 0.692);
+    border: none;
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    transition: 500ms;
+}
+
+.menu_cards button:hover {
+    background-color: rgba(183, 183, 6, 0.692);
+}
+
+.secao_contato {
+    padding: 3.8rem 0;
+    min-height: 30vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    background-color: #222831;
+}
+
+.secao_contato h2 {
+    font-size: 2.5rem;
+    color: white;
+}
+
+.container_contato {
+    display: flex;
+    justify-content: center;
+    gap: 8rem;
+    margin-right: 1.5rem;
+}
+
+.contato_cards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    text-align: center;
+}
+
+.contato_cards svg {
+    width: 3rem;
+    height: 3rem;
+}
+
+.contato_cards p {
+    font-size: 1.2rem;
+    color: white;
+}
+
+footer {
+    background-color: rgba(255, 255, 0, 0.692);
+    padding: 1%;
+}
+
+footer h2 {
+    color: black;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+/* Estilos para o modal */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.modal-content {
+    text-align: center;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    color: black;
+}
+
+.modal-content button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: #ffd43b;
+    color: #000;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.modal-content button:hover {
+    background: #ffd43b;
+}

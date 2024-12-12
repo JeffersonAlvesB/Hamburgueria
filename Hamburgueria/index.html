@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no" />
+    <meta name="author" content="Jefferson Alves">
+    <title>JeffBurguer</title>
+    <link rel="stylesheet" href="assents/style.css" />
+    <link rel="stylesheet" href="assents/mobile.css">
+    <link rel="shortcut icon" href="assents/images/home.png" type="image/x-icon">
+    <link rel="stylesheet" href="assents/toast.css">
+</head>
+
+<body>
+    <header>
+        <h1 class="logo">JeffBurguer</h1>
+        <nav class="navbar">
+            <ul class="links-topo">
+                <li><a href="#INICIO">Inicio</a></li>
+                <li><a href="#SERVIÇOS">Serviço</a></li>
+                <li><a href="#SOBRE">Sobre nós</a></li>
+                <li><a href="#MENU">Menu</a></li>
+                <li><a href="#CONTATO">Contato</a></li>
+            </ul>
+            <div id="carrinho_compras">
+                <svg class="carrinho_icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                    <path fill="#ffffff"
+                        d="M0 24C0 10.7 10.7 0 24 0H69.5c22 0 41.5 12.8 50.6 32h411c26.3 0 45.5 25 38.6 50.4l-41 152.3c-8.5 31.4-37 53.3-69.5 53.3H170.7l5.4 28.5c2.2 11.3 12.1 19.5 23.6 19.5H488c13.3 0 24 10.7 24 24s-10.7 24-24 24H199.7c-34.6 0-64.3-24.6-70.7-58.5L77.4 54.5c-.7-3.8-4-6.5-7.9-6.5H24C10.7 48 0 37.3 0 24zM128 464a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm336-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96z" />
+                </svg>
+            </div>
+            <div class="carrinho_container">
+                <h2>Suas Compras</h2>
+                <div class="cart-content">
+                </div>
+                <!-- Total -->
+                <div class="total">
+                    <div class="total_titulo">Total</div>
+                    <div id="total_preço">R$:0</div>
+                </div>
+                <!-- Btn comprar -->
+                <button onclick="Finalizada()" type="button" class="btn_comprar">Comprar</button>
+                <!-- Fechar carrinho -->
+                <svg class="fechar_carrinho" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+                    <!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                    <path
+                        d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z" />
+                </svg>
+            </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section id="INICIO" class="secao_inicio">
+            <div class="container_inicio">
+                <h2>
+                    Experimente o melhor <br />
+                    hamburgue do Brasil!!!
+                </h2>
+                <p>
+                    Peça já o seu e embarque em uma jornada gastronômica incomparável!
+                    Experimente o sabor único e a qualidade excepcional que tornam este
+                    hambúrguer uma verdadeira delícia.
+                </p>
+                <a href="#MENU">Peça agora</a>
+            </div>
+        </section>
+        <section id="SERVIÇOS" class="secao_serviços">
+            <h2>Serviços</h2>
+            <div class="container_serviços">
+                <div class="serviço">
+                    <img src="assents/images/Serviço1.jpg" alt="" />
+                    <h3>Comida quente</h3>
+                </div>
+                <div class="serviço">
+                    <img src="assents/images/Serviço2.jpg" alt="" />
+                    <h3>Entrega rápida </h3>
+                </div>
+                <div class="serviço">
+                    <img src="assents/images/Serviço3.jpg" alt="" />
+                    <h3>Pedido mais barato</h3>
+                </div>
+                <div class="serviço">
+                    <img src="assents/images/Serviço4.jpg" alt="" />
+                    <h3>Comida boa</h3>
+                </div>
+            </div>
+        </section>
+        <section id="SOBRE" class="secao_sobre">
+            <h2>Sobre Nós</h2>
+            <div class="container_sobre">
+                <img src="assents/images/home.png" alt="" />
+                <div class="sobreNos">
+                    <h3>Por que escolher nós?</h3>
+                    <p>
+                        Escolher-nos significa optar por uma experiência gastronômica que
+                        transcende simplesmente uma refeição. Nossa hambúrgueria se
+                        destaca pela dedicação em cada detalhe, desde a cuidadosa seleção
+                        de ingredientes frescos e de alta qualidade até o atendimento
+                        caloroso e personalizado. Nossa paixão pela culinária se reflete
+                        em cada hambúrguer, onde técnicas tradicionais se encontram com
+                        toques de criatividade.
+                    </p>
+                </div>
+            </div>
+        </section>
+        <section id="MENU" class="secao_menu">
+            <h2>Menu</h2>
+            <div class="container_menu">
+                <div class="notifications"></div>
+                <div class="menu_cards">
+                    <img class="produto_img" src="assents/images/Hamburgue-principal.png" alt="" />
+                    <h3 class="produto_titulo">X-Tudo</h3>
+                    <p>Hambúrguer, Presunto, Queijo, Ovo frito e Bacon.</p>
+                    <span class="produto_preço">R$:19,90</span>
+                    <button class="adicionar_carrinho">
+                        <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 576 512"
+                            height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M528.12 301.319l47.273-208C578.806 78.301 567.391 64 551.99 64H159.208l-9.166-44.81C147.758 8.021 137.93 0 126.529 0H24C10.745 0 0 10.745 0 24v16c0 13.255 10.745 24 24 24h69.883l70.248 343.435C147.325 417.1 136 435.222 136 456c0 30.928 25.072 56 56 56s56-25.072 56-56c0-15.674-6.447-29.835-16.824-40h209.647C430.447 426.165 424 440.326 424 456c0 30.928 25.072 56 56 56s56-25.072 56-56c0-22.172-12.888-41.332-31.579-50.405l5.517-24.276c3.413-15.018-8.002-29.319-23.403-29.319H218.117l-6.545-32h293.145c11.206 0 20.92-7.754 23.403-18.681z">
+                            </path>
+                        </svg>
+                        Adicionar ao carrinho
+                    </button>
+                </div>
+                <div class="menu_cards">
+                    <img class="produto_img" src="assents/images/ham-frango.png" alt="" />
+                    <h3 class="produto_titulo">X-Salada</h3>
+                    <p>Hambúguer, Bacon, Alface, Tomate e Milho.</p>
+                    <span class="produto_preço">R$:14,90</span>
+                    <button class="adicionar_carrinho">
+                        <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 576 512"
+                            height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M528.12 301.319l47.273-208C578.806 78.301 567.391 64 551.99 64H159.208l-9.166-44.81C147.758 8.021 137.93 0 126.529 0H24C10.745 0 0 10.745 0 24v16c0 13.255 10.745 24 24 24h69.883l70.248 343.435C147.325 417.1 136 435.222 136 456c0 30.928 25.072 56 56 56s56-25.072 56-56c0-15.674-6.447-29.835-16.824-40h209.647C430.447 426.165 424 440.326 424 456c0 30.928 25.072 56 56 56s56-25.072 56-56c0-22.172-12.888-41.332-31.579-50.405l5.517-24.276c3.413-15.018-8.002-29.319-23.403-29.319H218.117l-6.545-32h293.145c11.206 0 20.92-7.754 23.403-18.681z">
+                            </path>
+                        </svg>
+                        Adicionar ao carrinho
+                    </button>
+                </div>
+                <div class="menu_cards">
+                    <img class="produto_img" src="assents/images/batata-frita.png" alt="" />
+                    <h3 class="produto_titulo">Batata Frita</h3>
+                    <p>Maionese, Ketchup, Mostarda, Bacon e Calabresa.</p>
+                    <span class="produto_preço">R$:10,90</span>
+                    <button class="adicionar_carrinho">
+                        <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 576 512"
+                            height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M528.12 301.319l47.273-208C578.806 78.301 567.391 64 551.99 64H159.208l-9.166-44.81C147.758 8.021 137.93 0 126.529 0H24C10.745 0 0 10.745 0 24v16c0 13.255 10.745 24 24 24h69.883l70.248 343.435C147.325 417.1 136 435.222 136 456c0 30.928 25.072 56 56 56s56-25.072 56-56c0-15.674-6.447-29.835-16.824-40h209.647C430.447 426.165 424 440.326 424 456c0 30.928 25.072 56 56 56s56-25.072 56-56c0-22.172-12.888-41.332-31.579-50.405l5.517-24.276c3.413-15.018-8.002-29.319-23.403-29.319H218.117l-6.545-32h293.145c11.206 0 20.92-7.754 23.403-18.681z">
+                            </path>
+                        </svg>
+                        Adicionar ao carrinho
+                    </button>
+                </div>
+                <div class="menu_cards">
+                    <img class="produto_img" src="assents/images/Pizza.png" alt="" />
+                    <h3 class="produto_titulo">Pizza 4 queijos</h3>
+                    <p>Mussarela, Gorgonzola, Parmesão e Provolone.</p>
+                    <span class="produto_preço">R$:29,90</span>
+                    <button class="adicionar_carrinho">
+                        <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 576 512"
+                            height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M528.12 301.319l47.273-208C578.806 78.301 567.391 64 551.99 64H159.208l-9.166-44.81C147.758 8.021 137.93 0 126.529 0H24C10.745 0 0 10.745 0 24v16c0 13.255 10.745 24 24 24h69.883l70.248 343.435C147.325 417.1 136 435.222 136 456c0 30.928 25.072 56 56 56s56-25.072 56-56c0-15.674-6.447-29.835-16.824-40h209.647C430.447 426.165 424 440.326 424 456c0 30.928 25.072 56 56 56s56-25.072 56-56c0-22.172-12.888-41.332-31.579-50.405l5.517-24.276c3.413-15.018-8.002-29.319-23.403-29.319H218.117l-6.545-32h293.145c11.206 0 20.92-7.754 23.403-18.681z">
+                            </path>
+                        </svg>
+                        Adicionar ao carrinho
+                    </button>
+                </div>
+                <div class="menu_cards">
+                    <img class="produto_img" src="assents/images/pizza (2).png" alt="" />
+                    <h3 class="produto_titulo">Pizza Portuguesa</h3>
+                    <p>
+                        Molho de tomate, Queijo mussarela, Presunto, Cebola, Ovo,
+                        Azeitonas verdes ou pretas e Orégano.
+                    </p>
+                    <span class="produto_preço">R$:35,90</span>
+                    <button class="adicionar_carrinho">
+                        <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 576 512"
+                            height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M528.12 301.319l47.273-208C578.806 78.301 567.391 64 551.99 64H159.208l-9.166-44.81C147.758 8.021 137.93 0 126.529 0H24C10.745 0 0 10.745 0 24v16c0 13.255 10.745 24 24 24h69.883l70.248 343.435C147.325 417.1 136 435.222 136 456c0 30.928 25.072 56 56 56s56-25.072 56-56c0-15.674-6.447-29.835-16.824-40h209.647C430.447 426.165 424 440.326 424 456c0 30.928 25.072 56 56 56s56-25.072 56-56c0-22.172-12.888-41.332-31.579-50.405l5.517-24.276c3.413-15.018-8.002-29.319-23.403-29.319H218.117l-6.545-32h293.145c11.206 0 20.92-7.754 23.403-18.681z">
+                            </path>
+                        </svg>
+                        Adicionar ao carrinho
+                    </button>
+                </div>
+                <div class="menu_cards">
+                    <img class="produto_img" src="assents/images/macarrão.png" alt="" />
+                    <h3 class="produto_titulo">Macarrão</h3>
+                    <p>
+                        Macarrão, Queijo mussarela, Azeitonas, Molho de tomate, Orégano.
+                    </p>
+                    <span class="produto_preço">R$:20,90</span>
+                    <button class="adicionar_carrinho">
+                        <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 576 512"
+                            height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M528.12 301.319l47.273-208C578.806 78.301 567.391 64 551.99 64H159.208l-9.166-44.81C147.758 8.021 137.93 0 126.529 0H24C10.745 0 0 10.745 0 24v16c0 13.255 10.745 24 24 24h69.883l70.248 343.435C147.325 417.1 136 435.222 136 456c0 30.928 25.072 56 56 56s56-25.072 56-56c0-15.674-6.447-29.835-16.824-40h209.647C430.447 426.165 424 440.326 424 456c0 30.928 25.072 56 56 56s56-25.072 56-56c0-22.172-12.888-41.332-31.579-50.405l5.517-24.276c3.413-15.018-8.002-29.319-23.403-29.319H218.117l-6.545-32h293.145c11.206 0 20.92-7.754 23.403-18.681z">
+                            </path>
+                        </svg>
+                        Adicionar ao carrinho
+                    </button>
+                </div>
+            </div>
+        </section>
+        <section id="CONTATO" class="secao_contato">
+            <h2>Contato</h2>
+            <div class="container_contato">
+                <div class="contato_cards">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                        <!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                        <path fill="#FFD43B"
+                            d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48H48zM0 176V384c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V176L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z" />
+                    </svg>
+                    <p>Email: JeffBurguer@email.com</p>
+                    <p>Site: JeffBurguer.com</p>
+                </div>
+                <div class="contato_cards">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+                        <!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                        <path fill="#FFD43B"
+                            d="M80 0C44.7 0 16 28.7 16 64V448c0 35.3 28.7 64 64 64H304c35.3 0 64-28.7 64-64V64c0-35.3-28.7-64-64-64H80zm80 432h64c8.8 0 16 7.2 16 16s-7.2 16-16 16H160c-8.8 0-16-7.2-16-16s7.2-16 16-16z" />
+                    </svg>
+                    <p>Celular: 21 99999-9999</p>
+                    <p>Segunda a Sexta (9h até 20h)</p>
+                </div>
+                <div class="contato_cards">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+                        <!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                        <path fill="#FFD43B"
+                            d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z" />
+                    </svg>
+                    <p>Localização: Rio de Janeiro</p>
+                    <p>Brasil</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <h2><i>©Jefferson Alves 2024</i></h2>
+    </footer>
+
+    <script src="assents/script.js"></script>
+</body>
+
+</html>
